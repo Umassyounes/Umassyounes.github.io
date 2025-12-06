@@ -3,24 +3,46 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Younes Kouskouss – IT & Cybersecurity Portfolio</title>
+  <title>Younes Kouskouss – Portfolio</title>
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
       background: #f3f5f9;
       color: #111827;
       line-height: 1.6;
     }
-    .page {
-      max-width: 960px;
-      margin: 40px auto;
-      padding: 0 16px 40px;
+    a { text-decoration: none; color: inherit; }
+
+    .page { max-width: 960px; margin: 32px auto 40px; padding: 0 16px 40px; }
+
+    /* NAVBAR */
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
     }
+    .nav-left { font-weight: 700; color: #1d4ed8; }
+    .nav-links {
+      display: flex;
+      gap: 14px;
+      font-size: 0.9rem;
+    }
+    .nav-links a {
+      padding: 4px 10px;
+      border-radius: 999px;
+      color: #374151;
+    }
+    .nav-links a.active {
+      background: #e5f0ff;
+      color: #1d4ed8;
+      font-weight: 600;
+    }
+    .nav-links a:hover {
+      background: #e5e7eb;
+    }
+
     .card {
       background: #ffffff;
       border-radius: 14px;
@@ -28,44 +50,36 @@
       box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
       border: 1px solid #e5e7eb;
     }
-    .header {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      margin-bottom: 24px;
-    }
-    .name {
-      font-size: 1.9rem;
-      font-weight: 700;
-      color: #111827;
-    }
+
+    .name { font-size: 1.9rem; font-weight: 700; }
     .headline {
       font-size: 1rem;
       font-weight: 600;
       color: #2563eb;
+      margin-top: 4px;
     }
     .intro {
       font-size: 0.98rem;
       color: #4b5563;
+      margin-top: 14px;
       max-width: 720px;
     }
+
     .section-title {
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       font-weight: 700;
-      margin: 40px 0 16px;
+      margin: 28px 0 10px;
       display: flex;
       align-items: center;
       gap: 8px;
-      color: #111827;
     }
-    .section-title span.icon {
-      font-size: 1.3rem;
-    }
+    .section-title span.icon { font-size: 1.2rem; }
+
     .chips {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin-top: 8px;
+      margin-top: 6px;
     }
     .chip {
       font-size: 0.78rem;
@@ -75,193 +89,92 @@
       color: #1d4ed8;
       border: 1px solid #bfdbfe;
     }
-    .projects-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 16px;
-    }
-    @media (min-width: 720px) {
-      .projects-grid {
-        grid-template-columns: 1fr 1fr;
-      }
-    }
-    .project-card {
-      background: #ffffff;
-      border-radius: 12px;
-      padding: 18px 18px 20px;
-      border: 1px solid #e5e7eb;
-      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.04);
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-    .project-title {
-      font-size: 0.98rem;
-      font-weight: 700;
-      color: #1d4ed8;
-      text-decoration: none;
-    }
-    .project-title:hover {
-      text-decoration: underline;
-    }
-    .project-tagline {
-      font-size: 0.86rem;
-      color: #4b5563;
-    }
-    .project-meta {
-      font-size: 0.78rem;
-      color: #6b7280;
+
+    .list {
+      font-size: 0.95rem;
+      color: #374151;
+      margin-left: 18px;
       margin-top: 6px;
     }
-    .project-meta b {
-      color: #374151;
-    }
-    .project-footer {
-      margin-top: auto;
-      font-size: 0.78rem;
-      color: #6b7280;
-    }
-    .badge {
-      display: inline-block;
-      font-size: 0.7rem;
-      padding: 2px 8px;
-      border-radius: 999px;
-      background: #fef3c7;
-      color: #92400e;
-      border: 1px solid #fcd34d;
-      margin-left: 6px;
-    }
+
     .footer {
-      margin-top: 28px;
+      margin-top: 24px;
       font-size: 0.8rem;
       color: #6b7280;
       display: flex;
       flex-wrap: wrap;
-      gap: 16px;
+      gap: 12px;
       justify-content: space-between;
     }
-    .footer a {
-      color: #2563eb;
-      text-decoration: none;
-    }
-    .footer a:hover {
-      text-decoration: underline;
-    }
+    .footer a { color: #2563eb; }
+    .footer a:hover { text-decoration: underline; }
   </style>
 </head>
 <body>
   <main class="page">
+    <!-- NAV -->
+    <nav class="nav">
+      <div class="nav-left">Younes Kouskouss</div>
+      <div class="nav-links">
+        <a href="index.html" class="active">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="classes.html">Classes</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+
+    <!-- CARD -->
     <section class="card">
-      <header class="header">
-        <div>
-          <div class="name">Younes Kouskouss</div>
-          <div class="headline">
-            Aspiring SOC Analyst · Information Technology Student · Passionate About Cybersecurity
-          </div>
+      <header>
+        <div class="name">Younes Kouskouss</div>
+        <div class="headline">
+          Aspiring SOC Analyst · Information Technology Student · Passionate About Cybersecurity
         </div>
         <p class="intro">
-          Welcome to my IT and cybersecurity portfolio. Here you will find selected academic projects,
-          technical work, and hands-on labs that demonstrate my skills in system administration, networking,
-          cloud computing, scripting, web development, data, and digital forensics.
+          I am an Information Technology student at UMass Boston with a strong interest in
+          cybersecurity and cloud technologies. I enjoy building practical projects, learning
+          how systems really work, and helping people solve technical problems in a clear,
+          simple way.
         </p>
-        <div>
-          <div class="section-title" style="margin: 12px 0 6px;">
-            <span class="icon">🧩</span> Core Skills
-          </div>
-          <div class="chips">
-            <span class="chip">Linux / Ubuntu</span>
-            <span class="chip">System Administration</span>
-            <span class="chip">Networking Fundamentals</span>
-            <span class="chip">AWS Cloud</span>
-            <span class="chip">Python &amp; Bash Scripting</span>
-            <span class="chip">Web Development</span>
-            <span class="chip">SQL &amp; Data Warehousing</span>
-            <span class="chip">Computer Forensics</span>
-          </div>
-        </div>
       </header>
 
       <h2 class="section-title">
-        <span class="icon">📁</span> Projects
+        <span class="icon">🧩</span> Core Skills
       </h2>
-
-      <div class="projects-grid">
-        <!-- Campus Connect -->
-        <article class="project-card">
-          <a
-            class="project-title"
-            href="https://github.com/Umassyounes/Umassyounes.github.io/blob/main/campus-connect.md"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Campus Connect – Capstone Project
-            <span class="badge">Capstone</span>
-          </a>
-          <p class="project-tagline">
-            Marketplace platform for UMass Boston students and staff built as a semester-long team project.
-          </p>
-          <p class="project-meta">
-            <b>Tech:</b> TypeScript, React, Next.js, TailwindCSS, Prisma ORM, SQLite<br />
-            <b>Focus:</b> API design, database schema, collaboration, GitHub workflow
-          </p>
-          <p class="project-footer">
-            View full description and responsibilities on GitHub.
-          </p>
-        </article>
-
-        <!-- Steam & Shine -->
-        <article class="project-card">
-          <a
-            class="project-title"
-            href="https://github.com/Umassyounes/Umassyounes.github.io/blob/main/steam-and-shine.md"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Steam &amp; Shine – Dry Cleaning Platform
-          </a>
-          <p class="project-tagline">
-            Management system for a dry-cleaning and wash service business, supporting customers, services, and orders.
-          </p>
-          <p class="project-meta">
-            <b>Tech:</b> Node.js, Express, SQLite, EJS, HTML/CSS<br />
-            <b>Focus:</b> CRUD operations, SQL data modeling, dynamic forms, routing
-          </p>
-          <p class="project-footer">
-            Built end-to-end with database, server logic, and UI templates.
-          </p>
-        </article>
-
-        <!-- AWS Labs -->
-        <article class="project-card">
-          <a
-            class="project-title"
-            href="https://github.com/Umassyounes/Umassyounes.github.io/blob/main/aws-labs.md"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            AWS Cloud Labs – IT 456 &amp; IT 460
-          </a>
-          <p class="project-tagline">
-            Series of hands-on labs designing, securing, and monitoring cloud infrastructure in AWS.
-          </p>
-          <p class="project-meta">
-            <b>Tech:</b> EC2, VPC, IAM, ALB, Auto Scaling, CloudWatch, Kinesis, Lambda, Secrets Manager<br />
-            <b>Focus:</b> cloud architecture, security, automation, troubleshooting
-          </p>
-          <p class="project-footer">
-            Demonstrates practical cloud skills relevant to SOC and cloud security roles.
-          </p>
-        </article>
+      <div class="chips">
+        <span class="chip">Linux / Ubuntu</span>
+        <span class="chip">System Administration</span>
+        <span class="chip">Networking Fundamentals</span>
+        <span class="chip">Python &amp; Bash Scripting</span>
+        <span class="chip">Web Development</span>
+        <span class="chip">AWS Cloud</span>
+        <span class="chip">SQL &amp; Data Warehousing</span>
+        <span class="chip">Computer Forensics</span>
       </div>
 
+      <h2 class="section-title">
+        <span class="icon">🎯</span> Goals
+      </h2>
+      <ul class="list">
+        <li>Start my career in a SOC or security-focused IT role.</li>
+        <li>Keep building projects that show real-world problem solving.</li>
+        <li>Grow my skills in cloud security, incident response, and automation.</li>
+      </ul>
+
+      <h2 class="section-title">
+        <span class="icon">📍</span> Current Status
+      </h2>
+      <ul class="list">
+        <li>IT major at the University of Massachusetts Boston.</li>
+        <li>Working on a Capstone project called <strong>Campus Connect</strong>, a marketplace for students and staff.</li>
+        <li>Actively preparing for internships and entry-level cybersecurity roles.</li>
+      </ul>
+
       <footer class="footer">
+        <div>© <span id="year"></span> Younes Kouskouss</div>
         <div>
-          © <span id="year"></span> Younes Kouskouss
-        </div>
-        <div>
-          Email: <a href="mailto:younes.kouskouss@umb.edu">younes.kouskouss@umb.edu</a> ·
-          GitHub: <a href="https://github.com/Umassyounes">Umassyounes</a> ·
-          LinkedIn: <a href="https://www.linkedin.com/in/YOUR-LINK-HERE">Profile</a>
+          GitHub: <a href="https://github.com/Umassyounes" target="_blank">Umassyounes</a> ·
+          LinkedIn: <a href="https://www.linkedin.com/in/YOUR-LINK-HERE" target="_blank">Profile</a>
         </div>
       </footer>
     </section>
