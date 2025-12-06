@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Classes – Younes Kouskouss</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+           background: #f3f5f9; color: #111827; line-height: 1.6; }
+    a { text-decoration: none; color: inherit; }
+    .page { max-width: 960px; margin: 32px auto 40px; padding: 0 16px 40px; }
+
+    .nav { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+    .nav-left { font-weight: 700; color: #1d4ed8; }
+    .nav-links { display: flex; gap: 14px; font-size: 0.9rem; }
+    .nav-links a { padding: 4px 10px; border-radius: 999px; color: #374151; }
+    .nav-links a.active { background: #e5f0ff; color: #1d4ed8; font-weight: 600; }
+    .nav-links a:hover { background: #e5e7eb; }
+
+    .card {
+      background: #ffffff;
+      border-radius: 14px;
+      padding: 24px 28px;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.06);
+      border: 1px solid #e5e7eb;
+    }
+    .section-title {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .desc { font-size: 0.95rem; color: #4b5563; margin-bottom: 16px; }
+
+    .course-group { margin-top: 16px; }
+    .group-title { font-weight: 600; margin-bottom: 6px; }
+
+    ul.courses { margin-left: 18px; font-size: 0.94rem; color: #374151; }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <nav class="nav">
+      <div class="nav-left">Younes Kouskouss</div>
+      <div class="nav-links">
+        <a href="index.html">About</a>
+        <a href="projects.html">Projects</a>
+        <a href="classes.html" class="active">Classes</a>
+        <a href="contact.html">Contact</a>
+      </div>
+    </nav>
+
+    <section class="card">
+      <h1 class="section-title">Relevant Coursework</h1>
+      <p class="desc">
+        These courses helped me build a strong foundation in systems, networks, cloud infrastructure,
+        security, scripting, and data.
+      </p>
+
+      <div class="course-group">
+        <div class="group-title">Systems, Networking & Security</div>
+        <ul class="courses">
+          <li>IT 244 – Introduction to Linux/Unix</li>
+          <li>IT 246 – Introduction to Networks</li>
+          <li>IT 221 – Computer Forensics II</li>
+          <li>IT 341 – Introduction to System Administration</li>
+        </ul>
+      </div>
+
+      <div class="course-group">
+        <div class="group-title">Programming, Web & Data</div>
+        <ul class="courses">
+          <li>IT 116 / 117 – Scripting (Python)</li>
+          <li>IT 240 – Web Fluency</li>
+          <li>IT 230 – Relational Databases</li>
+          <li>IT 471 – Data Warehousing</li>
+        </ul>
+      </div>
+
+      <div class="course-group">
+        <div class="group-title">Cloud, Analytics & Capstone</div>
+        <ul class="courses">
+          <li>IT 456 – Cloud Information Management</li>
+          <li>IT 460 – Cloud Integration Methodologies</li>
+          <li>IT 370 – Business Analytics (Tableau / Python)</li>
+          <li>IT 485 – Capstone Project – Campus Connect</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
