@@ -18,7 +18,7 @@ Welcome to my IT and cybersecurity portfolio. Here you will find selected academ
 
 ## 📁 Projects
 
-### 🔹 [Campus Connect – Capstone Project](https://github.com/Umassyounes/Umassyounes.github.io/blob/main/campus-connect.md)
+### 🔹 [Campus Connect – Capstone Project]([https://github.com/Umassyounes/Umassyounes.github.io/blob/main/campus-connect.md](https://umassyounes.github.io/campus-connect))
 A semester-long team project creating a marketplace platform for UMass Boston students and staff.  
 **Skills demonstrated:** TypeScript, React, Next.js, Tailwind, Prisma ORM, database design, UI/UX, teamwork, GitHub workflow.
 
