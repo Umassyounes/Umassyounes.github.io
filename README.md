@@ -1,4 +1,3 @@
-# Umassyounes.github.io
 # Younes Kouskouss
 ### Aspiring SOC Analyst | Information Technology Student | Passionate About Cybersecurity
 
