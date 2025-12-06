@@ -13,7 +13,7 @@ Welcome to my IT and cybersecurity portfolio. Here you will find selected academ
 
 ## 📁 Projects
 
-- [Campus Connect – Capstone Project](campus-connect.md)
+- [Campus Connect – Capstone Project](https://github.com/Umassyounes/Umassyounes.github.io/blob/main/campus-connect.md)
 - [Steam & Shine Platform](steam-and-shine.md)
 - [AWS Cloud Labs](aws-labs.md)
 
